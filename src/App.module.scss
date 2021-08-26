@@ -1,3 +1,19 @@
-.para {
-    color: aqua;
+.outerContainer {
+    margin: 10px;
+    border: 2px solid black;
+    min-height: 100vh;
+
+    .header {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .ticketContainer {
+        margin: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }

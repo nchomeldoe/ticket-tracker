@@ -1,0 +1,16 @@
+.ticket {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    min-height: 150px;
+    width: 40vw;
+
+    p {
+        font-size: 15px;
+        padding-bottom: 5px;
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+}
