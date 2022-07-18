@@ -1,6 +1,14 @@
 import "./Filters.scss";
 
-const Filters = () => {
+const Filters = ({ setJobSearchValue, setNameSearchValue }) => {
+  const handleJobSearch = (e) => {
+    setJobSearchValue(e.target.value.toLowerCase());
+  };
+
+  const handleNameSearch = (e) => {
+    setNameSearchValue(e.target.value.toLowerCase());
+  };
+
   return (
     <div className="filters">
       <div className="filters__pin"></div>
@@ -16,6 +24,7 @@ const Filters = () => {
             type="text"
             id="job-title"
             name="job-title"
+            onChange={handleJobSearch}
           />
         </div>
 
@@ -28,6 +37,7 @@ const Filters = () => {
             type="text"
             id="employee-name"
             name="employee-name"
+            onChange={handleNameSearch}
           />
         </div>
 

@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./Counter.scss";
 
-const Counter = () => {
-  const [ticketCount, setTicketCount] = useState(0);
+const Counter = ({ setTicketCount, ticketCount }) => {
+  // const [ticketCount, setTicketCount] = useState(0);
 
   const handleDecrement = () => {
     setTicketCount(ticketCount === 0 ? ticketCount : ticketCount - 1);
