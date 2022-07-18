@@ -1,19 +1,24 @@
-import styles from './App.module.scss';
-import Ticket from "./components/Ticket";
-import team from "./data/team";
+import { useState } from "react";
+
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Filters from "./components/Filters/Filters";
+import Employee from "./components/Employee/Employee";
+import team from "./assets/data/team";
+
+const teamJSX = team.map((member) => {
+  const { id, name, role } = member;
+  return <Employee name={name} role={role} key={id} />;
+});
 
 const App = () => {
-  const getTicketJsx = (teamMember) => (
-    <Ticket teamMember = {teamMember} key={`ticket-${teamMember.id}`}/>
-  );
   return (
-    <section className={styles.outerContainer}>
-      <h1 className={styles.header}>Ticket Tracker</h1>
-        <div className={styles.ticketContainer}>
-          {team.map(getTicketJsx)}
-        </div>
-    </section>
+    <div className="app">
+      <Header />
+      <Filters />
+      <section className="app__ticket-container">{teamJSX}</section>
+    </div>
   );
-}
+};
 
 export default App;

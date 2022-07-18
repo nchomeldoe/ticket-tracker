@@ -1,0 +1,22 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 15rem;
+  background-color: $color-light;
+  font-size: 2.5rem;
+  margin-top: 0.3rem;
+  position: relative;
+  box-shadow: 0.025rem 0.025rem 0.25rem;
+
+  &__pin {
+    @include pin;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+  }
+}
