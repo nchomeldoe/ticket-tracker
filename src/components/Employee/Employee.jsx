@@ -1,7 +1,9 @@
+import { useState } from "react";
+
 import "./Employee.scss";
 import Counter from "../Counter/Counter";
 
-const Employee = ({ name, role, setTicketCount, ticketCount }) => {
+const Employee = ({ name, role, ticketCount }) => {
   return (
     <div className="employee">
       <div className="employee__pin"></div>
@@ -13,7 +15,7 @@ const Employee = ({ name, role, setTicketCount, ticketCount }) => {
           Role: <strong>{role}</strong>
         </p>
       </div>
-      <Counter setTicketCount={setTicketCount} ticketCount={ticketCount} />
+      <Counter ticketCount={ticketCount} />
     </div>
   );
 };

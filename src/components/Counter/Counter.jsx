@@ -1,15 +1,18 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./Counter.scss";
 
-const Counter = ({ setTicketCount, ticketCount }) => {
-  // const [ticketCount, setTicketCount] = useState(0);
+const Counter = ({ ticketCount }) => {
+  console.log(typeof ticketCount);
+  const [displayedCount, setDisplayedCount] = useState(ticketCount);
 
   const handleDecrement = () => {
-    setTicketCount(ticketCount === 0 ? ticketCount : ticketCount - 1);
+    setDisplayedCount(
+      displayedCount === 0 ? displayedCount : displayedCount - 1,
+    );
   };
 
   const handleIncrement = () => {
-    setTicketCount(ticketCount + 1);
+    setDisplayedCount(displayedCount + 1);
   };
 
   return (
@@ -19,7 +22,7 @@ const Counter = ({ setTicketCount, ticketCount }) => {
         <button className="counter__button" onClick={handleDecrement}>
           -
         </button>
-        <p className="counter__ticket-count">{ticketCount}</p>
+        <p className="counter__ticket-count">{displayedCount}</p>
         <button className="counter__button" onClick={handleIncrement}>
           +
         </button>
