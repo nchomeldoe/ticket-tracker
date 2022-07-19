@@ -15,14 +15,15 @@
     width: 22rem;
     padding-bottom: 1rem;
   }
-  &:hover {
-    transform: rotate(3deg);
-    transform-origin: top center;
-    transition: transform 0.2s;
-  }
 
   &__pin {
     @include pin;
+    &--left {
+      left: 0.3rem;
+    }
+    &--right {
+      right: 0.3rem;
+    }
   }
 
   &__heading {
