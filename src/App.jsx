@@ -16,24 +16,20 @@ const App = () => {
   });
   const [displayedCount, setDisplayedCount] = useState(counterValues);
 
-  const filteredTeam = team
-    .filter(({ role, name }) => {
-      const roleLower = role.toLowerCase();
-      const nameLower = name.toLowerCase();
-      return (
-        roleLower.includes(jobSearchValue) &&
-        nameLower.includes(nameSearchValue)
-      );
-    })
-    .sort((a, b) => {
-      if (sortDirection === "high-to-low") {
-        return displayedCount[b.id] - displayedCount[a.id];
-      } else if (sortDirection === "low-to-high") {
-        return displayedCount[a.id] - displayedCount[b.id];
-      } else {
-        return;
-      }
-    });
+  const filteredTeam = team.filter(({ role, name }) => {
+    const roleLower = role.toLowerCase();
+    const nameLower = name.toLowerCase();
+    return (
+      roleLower.includes(jobSearchValue) && nameLower.includes(nameSearchValue)
+    );
+  });
+
+  if (sortDirection === "high-to-low") {
+    filteredTeam.sort((a, b) => displayedCount[b.id] - displayedCount[a.id]);
+  }
+  if (sortDirection === "low-to-high") {
+    filteredTeam.sort((a, b) => displayedCount[a.id] - displayedCount[b.id]);
+  }
 
   const teamJSX = filteredTeam.map(({ id, name, role }) => {
     return (
