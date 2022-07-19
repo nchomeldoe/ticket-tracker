@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import FilterBox from "./components/FilterBox/FilterBox";
 import Employee from "./components/Employee/Employee";
 import team from "./assets/data/team";
-import FilterBox from "./components/FilterBox/FilterBox";
 
 const App = () => {
   const [jobSearchValue, setJobSearchValue] = useState("");
