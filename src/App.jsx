@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Filters from "./components/FilterBox/FilterBox";
+import FilterBox from "./components/FilterBox/FilterBox";
 import Employee from "./components/Employee/Employee";
 import team from "./assets/data/team";
 import FilterBox from "./components/FilterBox/FilterBox";
