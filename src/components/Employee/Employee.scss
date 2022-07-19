@@ -6,14 +6,13 @@
   align-items: center;
   width: 14rem;
   min-height: 12rem;
-  background-color: $color-green-background;
   margin-top: 0.3rem;
   position: relative;
   box-shadow: 0.025rem 0.025rem 0.25rem;
   padding: 0.5rem;
 
   &__pin {
-    @include pin($color-green-pin);
+    @include pin;
   }
 
   &__details {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Counter.scss";
 
 const Counter = ({ displayedCount, setDisplayedCount, id }) => {

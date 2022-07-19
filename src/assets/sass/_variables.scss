@@ -3,18 +3,15 @@
 $font-primary: "Edu TAS Beginner", cursive;
 $font-secondary: "Roboto", sans-serif;
 
-$background-color: #d9bea5;
 $color-light: white;
 $color-dark: black;
-$color-green-background: rgb(97, 215, 97);
-$color-green-pin: rgb(32, 63, 32);
 
-@mixin pin($background: $color-dark) {
+@mixin pin {
   position: absolute;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: $background;
   top: 0.2rem;
   border-radius: 2rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem $background;
+  background-color: $color-dark;
+  box-shadow: 0.1rem 0.1rem 0.2rem $color-dark;
 }
