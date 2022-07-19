@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ticket-tracker/static/css/main.7662204b.chunk.css",
-    "main.js": "/ticket-tracker/static/js/main.bf343d18.chunk.js",
-    "main.js.map": "/ticket-tracker/static/js/main.bf343d18.chunk.js.map",
-    "runtime-main.js": "/ticket-tracker/static/js/runtime-main.ac0ffda4.js",
-    "runtime-main.js.map": "/ticket-tracker/static/js/runtime-main.ac0ffda4.js.map",
-    "static/js/2.7bc01ccf.chunk.js": "/ticket-tracker/static/js/2.7bc01ccf.chunk.js",
-    "static/js/2.7bc01ccf.chunk.js.map": "/ticket-tracker/static/js/2.7bc01ccf.chunk.js.map",
-    "static/js/3.7f0df7d1.chunk.js": "/ticket-tracker/static/js/3.7f0df7d1.chunk.js",
-    "static/js/3.7f0df7d1.chunk.js.map": "/ticket-tracker/static/js/3.7f0df7d1.chunk.js.map",
+    "main.css": "/ticket-tracker/static/css/main.123c1515.chunk.css",
+    "main.js": "/ticket-tracker/static/js/main.19d3c055.chunk.js",
+    "main.js.map": "/ticket-tracker/static/js/main.19d3c055.chunk.js.map",
+    "runtime-main.js": "/ticket-tracker/static/js/runtime-main.5d500c80.js",
+    "runtime-main.js.map": "/ticket-tracker/static/js/runtime-main.5d500c80.js.map",
+    "static/js/2.f1c8386b.chunk.js": "/ticket-tracker/static/js/2.f1c8386b.chunk.js",
+    "static/js/2.f1c8386b.chunk.js.map": "/ticket-tracker/static/js/2.f1c8386b.chunk.js.map",
+    "static/js/3.de1be3fe.chunk.js": "/ticket-tracker/static/js/3.de1be3fe.chunk.js",
+    "static/js/3.de1be3fe.chunk.js.map": "/ticket-tracker/static/js/3.de1be3fe.chunk.js.map",
     "index.html": "/ticket-tracker/index.html",
-    "static/css/main.7662204b.chunk.css.map": "/ticket-tracker/static/css/main.7662204b.chunk.css.map",
-    "static/js/2.7bc01ccf.chunk.js.LICENSE.txt": "/ticket-tracker/static/js/2.7bc01ccf.chunk.js.LICENSE.txt"
+    "static/css/main.123c1515.chunk.css.map": "/ticket-tracker/static/css/main.123c1515.chunk.css.map",
+    "static/js/2.f1c8386b.chunk.js.LICENSE.txt": "/ticket-tracker/static/js/2.f1c8386b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ticket-tracker/static/media/hd-wallpaper-g8ccec26d8_1280.b1cc50c1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ac0ffda4.js",
-    "static/js/2.7bc01ccf.chunk.js",
-    "static/css/main.7662204b.chunk.css",
-    "static/js/main.bf343d18.chunk.js"
+    "static/js/runtime-main.5d500c80.js",
+    "static/js/2.f1c8386b.chunk.js",
+    "static/css/main.123c1515.chunk.css",
+    "static/js/main.19d3c055.chunk.js"
   ]
 }
