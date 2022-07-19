@@ -7,29 +7,55 @@ import Employee from "./components/Employee/Employee";
 import team from "./assets/data/team";
 
 const App = () => {
-  // const [ticketCount, setTicketCount] = useState(0);
   const [jobSearchValue, setJobSearchValue] = useState("");
   const [nameSearchValue, setNameSearchValue] = useState("");
   const [sortDirection, setSortDirection] = useState("");
+  console.log("team", team);
+  // const counterOpen =
+  const [displayedCount, setDisplayedCount] = useState({
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+  });
 
   const filteredTeam = team
-    .map((member) => {
-      member.ticketCount = 0;
-      return member;
+    .filter(({ role, name }) => {
+      const roleLower = role.toLowerCase();
+      const nameLower = name.toLowerCase();
+      return (
+        roleLower.includes(jobSearchValue) &&
+        nameLower.includes(nameSearchValue)
+      );
     })
-    .filter((member) => {
-      const role = member.role.toLowerCase();
-      const name = member.name.toLowerCase();
-      return role.includes(jobSearchValue) && name.includes(nameSearchValue);
+    .sort((a, b) => {
+      if (sortDirection === "high-to-low") {
+        return displayedCount[b.id] - displayedCount[a.id];
+      } else if (sortDirection === "low-to-high") {
+        return displayedCount[a.id] - displayedCount[b.id];
+      } else {
+        return;
+      }
     });
 
-  const teamJSX = filteredTeam.map((member) => {
-    const { id, name, role, ticketCount } = member;
+  const teamJSX = filteredTeam.map(({ id, name, role }) => {
     return (
-      <Employee name={name} role={role} key={id} ticketCount={ticketCount} />
+      <Employee
+        id={id}
+        name={name}
+        role={role}
+        key={id}
+        displayedCount={displayedCount}
+        setDisplayedCount={setDisplayedCount}
+      />
     );
   });
-  console.log(teamJSX);
 
   return (
     <div className="app">
@@ -37,6 +63,7 @@ const App = () => {
       <Filters
         setJobSearchValue={setJobSearchValue}
         setNameSearchValue={setNameSearchValue}
+        setSortDirection={setSortDirection}
       />
       <section className="app__ticket-container">{teamJSX}</section>
     </div>

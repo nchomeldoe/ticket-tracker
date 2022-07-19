@@ -1,18 +1,18 @@
 import { useState } from "react";
 import "./Counter.scss";
 
-const Counter = ({ ticketCount }) => {
-  console.log(typeof ticketCount);
-  const [displayedCount, setDisplayedCount] = useState(ticketCount);
-
+const Counter = ({ displayedCount, setDisplayedCount, id }) => {
   const handleDecrement = () => {
-    setDisplayedCount(
-      displayedCount === 0 ? displayedCount : displayedCount - 1,
-    );
+    const newDisplayedCount = { ...displayedCount };
+    newDisplayedCount[id] =
+      displayedCount[id] === 0 ? 0 : displayedCount[id] - 1;
+    setDisplayedCount(newDisplayedCount);
   };
 
   const handleIncrement = () => {
-    setDisplayedCount(displayedCount + 1);
+    const newDisplayedCount = { ...displayedCount };
+    newDisplayedCount[id] = displayedCount[id] + 1;
+    setDisplayedCount(newDisplayedCount);
   };
 
   return (
@@ -22,7 +22,7 @@ const Counter = ({ ticketCount }) => {
         <button className="counter__button" onClick={handleDecrement}>
           -
         </button>
-        <p className="counter__ticket-count">{displayedCount}</p>
+        <p className="counter__ticket-count">{displayedCount[id]}</p>
         <button className="counter__button" onClick={handleIncrement}>
           +
         </button>

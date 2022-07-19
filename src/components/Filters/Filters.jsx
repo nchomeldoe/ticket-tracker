@@ -1,12 +1,20 @@
 import "./Filters.scss";
 
-const Filters = ({ setJobSearchValue, setNameSearchValue }) => {
+const Filters = ({
+  setJobSearchValue,
+  setNameSearchValue,
+  setSortDirection,
+}) => {
   const handleJobSearch = (e) => {
     setJobSearchValue(e.target.value.toLowerCase());
   };
 
   const handleNameSearch = (e) => {
     setNameSearchValue(e.target.value.toLowerCase());
+  };
+
+  const handleSort = (e) => {
+    setSortDirection(e.target.value);
   };
 
   return (
@@ -49,6 +57,7 @@ const Filters = ({ setJobSearchValue, setNameSearchValue }) => {
             className="filters__select"
             name="sorting-order"
             id="sorting-order"
+            onChange={handleSort}
           >
             <option className="filters__select-option" value={"default"}>
               --
