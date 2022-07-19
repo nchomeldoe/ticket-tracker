@@ -19,7 +19,8 @@ const FilterBox = ({
 
   return (
     <div className="filters">
-      <div className="filters__pin"></div>
+      <div className="filters__pin filters__pin--left"></div>
+      <div className="filters__pin filters__pin--right"></div>
       <h2 className="filters__heading">Filter</h2>
 
       <div className="filters__main">
