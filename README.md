@@ -4,4 +4,4 @@ Built in React with useState. SCSS used for styling and BEM naming convention us
 
 Screenshot:
 
-![Screenshot](./assets/images/ticket-tracker-screenshot.png)
+![Screenshot](./src/assets/images/ticket-tracker-screenshot.png)
