@@ -11,6 +11,14 @@
   margin-top: 0.3rem;
   position: relative;
   box-shadow: 0.025rem 0.025rem 0.25rem;
+  @media screen and (min-width: 768px) {
+    width: 17rem;
+  }
+  &:hover {
+    transform: rotate(3deg);
+    transform-origin: top center;
+    transition: transform 0.2s;
+  }
 
   &__pin {
     @include pin;

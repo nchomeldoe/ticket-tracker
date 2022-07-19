@@ -1,6 +1,6 @@
-import "./Filters.scss";
+import "./FilterBox.scss";
 
-const Filters = ({
+const FilterBox = ({
   setJobSearchValue,
   setNameSearchValue,
   setSortDirection,
@@ -75,4 +75,4 @@ const Filters = ({
   );
 };
 
-export default Filters;
+export default FilterBox;

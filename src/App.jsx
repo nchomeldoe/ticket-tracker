@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Filters from "./components/Filters/Filters";
+import Filters from "./components/FilterBox/FilterBox";
 import Employee from "./components/Employee/Employee";
 import team from "./assets/data/team";
+import FilterBox from "./components/FilterBox/FilterBox";
 
 const App = () => {
   const [jobSearchValue, setJobSearchValue] = useState("");
@@ -31,7 +32,7 @@ const App = () => {
     filteredTeam.sort((a, b) => displayedCount[a.id] - displayedCount[b.id]);
   }
 
-  const teamJSX = filteredTeam.map(({ id, name, role }) => {
+  const filteredTeamJSX = filteredTeam.map(({ id, name, role }) => {
     return (
       <Employee
         id={id}
@@ -47,12 +48,12 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Filters
+      <FilterBox
         setJobSearchValue={setJobSearchValue}
         setNameSearchValue={setNameSearchValue}
         setSortDirection={setSortDirection}
       />
-      <section className="app__ticket-container">{teamJSX}</section>
+      <section className="app__ticket-container">{filteredTeamJSX}</section>
     </div>
   );
 };

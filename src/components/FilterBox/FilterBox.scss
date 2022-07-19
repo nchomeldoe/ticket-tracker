@@ -10,6 +10,16 @@
   position: relative;
   box-shadow: 0.025rem 0.025rem 0.25rem;
   padding: 0.5rem;
+  padding-bottom: 0.8rem;
+  @media screen and (min-width: 768px) {
+    width: 22rem;
+    padding-bottom: 1rem;
+  }
+  &:hover {
+    transform: rotate(3deg);
+    transform-origin: top center;
+    transition: transform 0.2s;
+  }
 
   &__pin {
     @include pin;
@@ -18,12 +28,20 @@
   &__heading {
     margin-top: 0.5rem;
     font-size: 1.5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
   }
 
   &__main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    @media screen and (min-width: 768px) {
+      gap: 0.8rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__label {
